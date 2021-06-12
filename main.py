@@ -67,7 +67,7 @@ class Face_Recognition_System:
         b1 = Button(bg_img, image = self.photoimg5,command=self.face_date, cursor="hand2")
         b1.place(x=800,y=50,width=220,height=220)
 
-        b1_1 = Button(bg_img, text="Face Detector", cursor="hand2",command=self.face_date,font=("times new roman",15,"bold"),bg="darkblue",fg="white")
+        b1_1 = Button(bg_img, text="Take Attendance", cursor="hand2",command=self.face_date,font=("times new roman",15,"bold"),bg="darkblue",fg="white")
         b1_1.place(x=800,y=260,width=220,height=40)
 
 
@@ -79,7 +79,7 @@ class Face_Recognition_System:
         b1 = Button(bg_img, image = self.photoimg6, command=self.attendance_date, cursor="hand2")
         b1.place(x=1100,y=50,width=220,height=220)
 
-        b1_1 = Button(bg_img, text="Attendance", cursor="hand2",command=self.attendance_date,font=("times new roman",15,"bold"),bg="darkblue",fg="white")
+        b1_1 = Button(bg_img, text="Attendance System", cursor="hand2",command=self.attendance_date,font=("times new roman",15,"bold"),bg="darkblue",fg="white")
         b1_1.place(x=1100,y=260,width=220,height=40)
 
 

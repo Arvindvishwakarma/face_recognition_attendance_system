@@ -33,36 +33,19 @@ class Attendance:
 
 
         #img 1
-        img = Image.open(r"img\header.jpg")
-        img = img.resize((800,200),Image.ANTIALIAS)
+        img = Image.open(r"img\attendanceHeader.jpg")
+        img = img.resize((1530,150),Image.ANTIALIAS)
         self.photoimg = ImageTk.PhotoImage(img)
 
         f_lbl = Label(self.root,image = self.photoimg)
-        f_lbl.place(x=0,y=0,width=800,height=200)
-
-        #img 2
-        img1 = Image.open(r"img\clg.jpg")
-        img1 = img1.resize((800,200),Image.ANTIALIAS)
-        self.photoimg1 = ImageTk.PhotoImage(img1)
-
-        f_lbl = Label(self.root,image = self.photoimg1)
-        f_lbl.place(x=800,y=0,width=800,height=200) 
+        f_lbl.place(x=0,y=0,width=1530,height=150)
+ 
 
 
-        #background image
-        img3 = Image.open(r"D:\__Programming\opencv\project\img\dev.jpg")
-        img3 = img3.resize((1530,710),Image.ANTIALIAS)
-        self.photoimg3 = ImageTk.PhotoImage(img3)
-
-        bg_img = Label(self.root,image = self.photoimg3)
-        bg_img.place(x=0,y=130,width=1530,height=710)
-
-        title_lbl = Label(bg_img, text="ATTENDANCE MANAGEMENT SYSTEM", font=("times new roman",35,"bold"),bg="red",fg="white")
-        title_lbl.place(x=0,y=0,width=1530,height=45)
-
+       
         #main frame
-        main_frame = Frame(bg_img,bd=2,bg="white")
-        main_frame.place(x=10,y=55,width=1500,height=600)
+        main_frame = Frame(self.root,bd=2,bg="white")
+        main_frame.place(x=10,y=170,width=1500,height=600)
 
         #left  label frame
         Left_frame = LabelFrame(main_frame,bd=2,bg="white",relief=RIDGE,text="Student Attendence Details",font=("times new roman",12,"bold"))
@@ -136,8 +119,8 @@ class Attendance:
 
 
          #buttons frame
-        btn_frame = Frame(left_inside_frame ,bd=2,relief=RIDGE,bg="white")
-        btn_frame.place(x=0,y=350,width=715,height=35)
+        btn_frame = Frame(left_inside_frame ,bd=0,relief=RIDGE,bg="white")
+        btn_frame.place(x=70,y=360,width=570,height=35)
 
         import_btn = Button(btn_frame, text="Import csv",command=self.importCsv,font=("times new roman",12,"bold"),bg="blue",fg="white",width=19)
         import_btn.grid(row=0,column=0)
@@ -145,11 +128,8 @@ class Attendance:
         export_btn = Button(btn_frame, text="Export csv",command=self.exportCsv,font=("times new roman",12,"bold"),bg="blue",fg="white",width=19)
         export_btn.grid(row=0,column=1)
 
-        update_btn = Button(btn_frame, text="Update",font=("times new roman",12,"bold"),bg="blue",fg="white",width=19)
-        update_btn.grid(row=0,column=2)
-
         reset_btn = Button(btn_frame,command=self.reset_data ,text="Reset",font=("times new roman",12,"bold"),bg="blue",fg="white",width=19)
-        reset_btn.grid(row=0,column=3)
+        reset_btn.grid(row=0,column=2)
 
 
 

@@ -13,28 +13,23 @@ class Train:
         self.root.geometry("1530x790+0+0")
         self.root.title("Face Recognition System") 
 
-        title_lbl = Label(self.root, text="TRAIN DATASET", font=("times new roman",35,"bold"),bg="white",fg="green")
-        title_lbl.place(x=0,y=0,width=1530,height=45)
+        
 
-        img_top = Image.open(r"img\facialrecognition.png")
-        img_top = img_top.resize((1530,325),Image.ANTIALIAS)
+        img_top = Image.open(r"img\trainingtHeader.jpg")
+        img_top = img_top.resize((1530,200),Image.ANTIALIAS)
         self.photoimg_top = ImageTk.PhotoImage(img_top)
 
         f_lbl = Label( self.root,image = self.photoimg_top)
-        f_lbl.place(x=0,y=55,width=1530,height=325)
+        f_lbl.place(x=0,y=-60,width=1530,height=325)
+
+        # click title
+
+        title_lbl = Label(self.root, text="Click on the 'Train Data' button for train the dataset", font=("times new roman",20,"bold"),fg="black")
+        title_lbl.place(x=0,y=260,width=1530,height=45)
 
         #button
         b1_1 = Button(self.root, text="Train Data",command=self.train_classifier, cursor="hand2",font=("times new roman",30,"bold"),bg="red",fg="white")
-        b1_1.place(x=0,y=380,width=1530,height=60)
-
-
-
-        img_bottom = Image.open(r"img\di.jpg")
-        img_bottom = img_bottom.resize((1530,325),Image.ANTIALIAS)
-        self.photoimg_bottom = ImageTk.PhotoImage(img_bottom)
-
-        f_lbl = Label( self.root,image = self.photoimg_bottom)
-        f_lbl.place(x=0,y=440,width=1530,height=325)
+        b1_1.place(x=615,y=380,width=300,height=60)
 
 
     def train_classifier(self):

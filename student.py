@@ -30,12 +30,6 @@ class Student:
         self.var_teacher = StringVar()
 
 
-
-
-
-
-
-
         #img 1
         img = Image.open(r"D:\__Programming\opencv\project\img\studentHeader.jpg")
         img = img.resize((1530,150),Image.ANTIALIAS)
@@ -45,32 +39,16 @@ class Student:
         f_lbl.place(x=0,y=0,width=1530,height=150)
 
 
-         #background image
-        img3 = Image.open(r"D:\__Programming\opencv\project\img\dev.jpg")
-        img3 = img3.resize((1530,710),Image.ANTIALIAS)
-        self.photoimg3 = ImageTk.PhotoImage(img3)
-
-        bg_img = Label(self.root,image = self.photoimg3)
-        bg_img.place(x=0,y=130,width=1530,height=710)
-
-
-        main_frame = Frame(bg_img,bd=2,bg="white")
-        main_frame.place(x=10,y=10,width=1500,height=600)
+        main_frame = Frame(self.root,bd=2)
+        main_frame.place(x=10,y=170,width=1500,height=600)
 
         #left  label frame
         Left_frame = LabelFrame(main_frame,bd=2,bg="white",relief=RIDGE,text="Student Details",font=("times new roman",12,"bold"))
         Left_frame.place(x=10,y=1,width=730,height=590)
 
-        img_left = Image.open(r"D:\__Programming\opencv\project\img\girl.jpeg")
-        img_left = img_left.resize((720,130),Image.ANTIALIAS)
-        self.photoimg_left = ImageTk.PhotoImage(img_left)
-
-        f_lbl = Label( Left_frame,image = self.photoimg_left)
-        f_lbl.place(x=5,y=0,width=720,height=130)
-
-                #current course
+        #current course
         current_course_frame = LabelFrame(Left_frame,bd=2,bg="white",relief=RIDGE,text="Current course information",font=("times new roman",12,"bold"))
-        current_course_frame.place(x=5,y=135,width=720,height=130)
+        current_course_frame.place(x=5,y=25,width=720,height=130)
 
                             #department
         dep_label = Label(current_course_frame, text="Department",font=("times new roman",12,"bold"),bg="white")
@@ -114,7 +92,7 @@ class Student:
 
         #Class student information
         class_student_frame = LabelFrame(Left_frame,bd=2,bg="white",relief=RIDGE,text="Class Student information",font=("times new roman",12,"bold"))
-        class_student_frame.place(x=5,y=265,width=720,height=300)
+        class_student_frame.place(x=5,y=200,width=720,height=350)
 
                          #stidentId
         studentId_label = Label(class_student_frame, text="StudentID:",font=("times new roman",12,"bold"),bg="white")
@@ -209,7 +187,7 @@ class Student:
 
         #buttons frame
         btn_frame = Frame(class_student_frame,bd=2,relief=RIDGE,bg="white")
-        btn_frame.place(x=5,y=200,width=705,height=70)
+        btn_frame.place(x=5,y=250,width=705,height=70)
 
         save_btn = Button(btn_frame, text="Save",command=self.add_data,font=("times new roman",12,"bold"),bg="blue",fg="white",width=19)
         save_btn.grid(row=0,column=0)
@@ -235,43 +213,36 @@ class Student:
 
 
         #right  label frame
-        Right_frame = LabelFrame(main_frame,bd=2,bg="white",relief=RIDGE, text="Student Details",font=("times new roman",12,"bold"))
+        Right_frame = LabelFrame(main_frame,bd=2,bg="white",relief=RIDGE, text="Attendance Details",font=("times new roman",12,"bold"))
         Right_frame.place(x=750,y=1,width=720,height=590)
-
-        img_right = Image.open(r"D:\__Programming\opencv\project\img\student.jpg")
-        img_right = img_right.resize((720,130),Image.ANTIALIAS)
-        self.photoimg_right = ImageTk.PhotoImage(img_right)
-
-        f_lbl = Label( Right_frame,image = self.photoimg_right)
-        f_lbl.place(x=5,y=0,width=720,height=130)
 
 
         # ==========search system============
 
-        search_frame = LabelFrame(Right_frame, bd=2, relief=RIDGE,text="Search",font=("times new roman",12,"bold"),bg="white")
-        search_frame.place(x=5,y=135,width=710,height=70 )
+        # search_frame = LabelFrame(Right_frame, bd=2, relief=RIDGE,text="Search",font=("times new roman",12,"bold"),bg="white")
+        # search_frame.place(x=5,y=135,width=710,height=70 )
 
-        search_label = Label(search_frame, text="Search By:",font=("times new roman",15,"bold"),bg="red",fg="white")
-        search_label.grid(row=0,column=0,padx=10, pady=5, sticky=W )
+        # search_label = Label(search_frame, text="Search By:",font=("times new roman",15,"bold"),bg="red",fg="white")
+        # search_label.grid(row=0,column=0,padx=10, pady=5, sticky=W )
 
-        search_combo = ttk.Combobox(search_frame,font=("times new roman",12,"bold"),state="readonly",width=15)
-        search_combo["values"] = ("Select","Roll","Phone_No")
-        search_combo.current(0)
-        search_combo.grid(row=0,column=1,padx=2,pady=10, sticky=W) 
+        # search_combo = ttk.Combobox(search_frame,font=("times new roman",12,"bold"),state="readonly",width=15)
+        # search_combo["values"] = ("Select","Roll","Phone_No")
+        # search_combo.current(0)
+        # search_combo.grid(row=0,column=1,padx=2,pady=10, sticky=W) 
 
 
-        search_entry = ttk.Entry(search_frame,width=15,font=("times new roman",12,"bold"))
-        search_entry.grid(row=0,column=2,padx=10,pady=5, sticky=W)
+        # search_entry = ttk.Entry(search_frame,width=15,font=("times new roman",12,"bold"))
+        # search_entry.grid(row=0,column=2,padx=10,pady=5, sticky=W)
 
-        search_btn = Button(search_frame, text="Search",font=("times new roman",12,"bold"),bg="blue",fg="white",width=14)
-        search_btn.grid(row=0,column=3,padx=4)
+        # search_btn = Button(search_frame, text="Search",font=("times new roman",12,"bold"),bg="blue",fg="white",width=14)
+        # search_btn.grid(row=0,column=3,padx=4)
 
-        showAll_btn = Button(search_frame, text="Show All",font=("times new roman",12,"bold"),bg="blue",fg="white",width=14)
-        showAll_btn.grid(row=0,column=4,padx=4 )
+        # showAll_btn = Button(search_frame, text="Show All",font=("times new roman",12,"bold"),bg="blue",fg="white",width=14)
+        # showAll_btn.grid(row=0,column=4,padx=4 )
 
         #============table frame=============
         tabel_frame = Frame(Right_frame, bd=2, relief=RIDGE,bg="white")
-        tabel_frame.place(x=5,y=210,width=710,height=350)
+        tabel_frame.place(x=5,y=35,width=710,height=520)
 
  
         scroll_x = ttk.Scrollbar(tabel_frame,orient=HORIZONTAL)

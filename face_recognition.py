@@ -18,25 +18,23 @@ class Face_Recognition:
         title_lbl = Label(self.root, text="FACE RECOGNITION", font=("times new roman",35,"bold"),bg="white",fg="green")
         title_lbl.place(x=0,y=0,width=1530,height=45)
 
-        #image left
-        img_top = Image.open(r"img\face_detector1.jpg")
-        img_top = img_top.resize((650,700),Image.ANTIALIAS)
-        self.photoimg_top = ImageTk.PhotoImage(img_top)
+        #header image
+        img = Image.open(r"D:\__Programming\opencv\project\img\faceDetectionHeader.jpg")
+        img = img.resize((1530,150),Image.ANTIALIAS)
+        self.photoimg = ImageTk.PhotoImage(img)
 
-        f_lbl = Label( self.root,image = self.photoimg_top)
-        f_lbl.place(x=0,y=55,width=650,height=700)
+        f_lbl = Label(self.root,image = self.photoimg)
+        f_lbl.place(x=0,y=0,width=1530,height=150)
 
-        #image right
-        img_side = Image.open(r"img\facial_recognition_system_identification_digital_id_security_scanning_thinkstock_858236252_3x3-100740902-large.jpg")
-        img_side = img_side.resize((950,700),Image.ANTIALIAS)
-        self.photoimg_side = ImageTk.PhotoImage(img_side)
 
-        f_lbl = Label(self.root,image = self.photoimg_side)
-        f_lbl.place(x=650,y=55,width=950,height=700)
+        # click detect
+
+        title_lbl = Label(self.root, text="Click on the 'Take Attendace' button for take aattendence using face recognition", font=("times new roman",20,"bold"),fg="black")
+        title_lbl.place(x=0,y=260,width=1530,height=45)
 
         #button
-        b1_1 = Button(f_lbl, text="Face Detection",command=self.face_recog, cursor="hand2",font=("times new roman",15,"bold"),bg="green",fg="white")
-        b1_1.place(x=370,y=615,width=200,height=40)
+        b1_1 = Button(self.root, text="Take Attendace",command=self.face_recog, cursor="hand2",font=("times new roman",15,"bold"),bg="green",fg="white")
+        b1_1.place(x=615,y=380,width=300,height=60)
 
  
      #========atendance=============
