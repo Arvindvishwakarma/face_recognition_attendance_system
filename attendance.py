@@ -33,7 +33,7 @@ class Attendance:
 
 
         #img 1
-        img = Image.open(r"img\smart-attendance.jpg")
+        img = Image.open(r"img\header.jpg")
         img = img.resize((800,200),Image.ANTIALIAS)
         self.photoimg = ImageTk.PhotoImage(img)
 

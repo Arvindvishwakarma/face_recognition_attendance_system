@@ -37,28 +37,12 @@ class Student:
 
 
         #img 1
-        img = Image.open(r"D:\__Programming\opencv\project\img\BestFacialRecognition.jpg")
-        img = img.resize((500,130),Image.ANTIALIAS)
+        img = Image.open(r"D:\__Programming\opencv\project\img\studentHeader.jpg")
+        img = img.resize((1530,150),Image.ANTIALIAS)
         self.photoimg = ImageTk.PhotoImage(img)
 
         f_lbl = Label(self.root,image = self.photoimg)
-        f_lbl.place(x=0,y=0,width=500,height=130)
-
-        #img 2
-        img1 = Image.open(r"D:\__Programming\opencv\project\img\university.jpg")
-        img1 = img1.resize((500,130),Image.ANTIALIAS)
-        self.photoimg1 = ImageTk.PhotoImage(img1)
-
-        f_lbl = Label(self.root,image = self.photoimg1)
-        f_lbl.place(x=500,y=0,width=500,height=130) 
-
-        #img 3
-        img2 = Image.open(r"D:\__Programming\opencv\project\img\images.jpg")
-        img2 = img2.resize((500,130),Image.ANTIALIAS)
-        self.photoimg2 = ImageTk.PhotoImage(img2)
-
-        f_lbl = Label(self.root,image = self.photoimg2)
-        f_lbl.place(x=1000,y=0,width=550,height=130)
+        f_lbl.place(x=0,y=0,width=1530,height=150)
 
 
          #background image
@@ -69,12 +53,9 @@ class Student:
         bg_img = Label(self.root,image = self.photoimg3)
         bg_img.place(x=0,y=130,width=1530,height=710)
 
-        title_lbl = Label(bg_img, text="STUDENT MANAGEMENT SYSTEM", font=("times new roman",35,"bold"),bg="red",fg="white")
-        title_lbl.place(x=0,y=0,width=1530,height=45)
-
 
         main_frame = Frame(bg_img,bd=2,bg="white")
-        main_frame.place(x=10,y=55,width=1500,height=600)
+        main_frame.place(x=10,y=10,width=1500,height=600)
 
         #left  label frame
         Left_frame = LabelFrame(main_frame,bd=2,bg="white",relief=RIDGE,text="Student Details",font=("times new roman",12,"bold"))

@@ -123,7 +123,7 @@ class Face_Recognition:
                 cv2.imshow("Welcome to face recognition",img)
 
 
-                if cv2.waitKey(1)==13:
+                if cv2.waitKey(1) & 0xFF == ord('q'):
                     break
             video_cap.release()
             cv2.destroyAllWindows()    
