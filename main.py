@@ -37,7 +37,7 @@ class Face_Recognition_System:
 
 
         #student button
-        img4 = Image.open(r"img\student.jpg")
+        img4 = Image.open(r"img\attendanceEdit.jpg")
         img4 = img4.resize((220,220),Image.ANTIALIAS)
         self.photoimg4 = ImageTk.PhotoImage(img4)
 
@@ -49,7 +49,7 @@ class Face_Recognition_System:
 
 
         #train button
-        img8 = Image.open(r"img\facial_recognition_system_identification_digital_id_security_scanning_thinkstock_858236252_3x3-100740902-large.jpg")
+        img8 = Image.open(r"img\trainingEdit.jpg")
         img8 = img8.resize((220,220),Image.ANTIALIAS)
         self.photoimg8 = ImageTk.PhotoImage(img8)
 
@@ -60,7 +60,7 @@ class Face_Recognition_System:
         b1_1.place(x=500,y=260,width=220,height=40)
 
         #detect face button
-        img5 = Image.open(r"img\face_detector1.jpg")
+        img5 = Image.open(r"img\faceEdit.jpg")
         img5 = img5.resize((220,220),Image.ANTIALIAS)
         self.photoimg5 = ImageTk.PhotoImage(img5)
 
@@ -72,7 +72,7 @@ class Face_Recognition_System:
 
 
         #attendance button
-        img6 = Image.open(r"img\smart-attendance.jpg")
+        img6 = Image.open(r"img\attendanceEdit.jpg")
         img6 = img6.resize((220,220),Image.ANTIALIAS)
         self.photoimg6 = ImageTk.PhotoImage(img6)
 
@@ -86,7 +86,7 @@ class Face_Recognition_System:
         
 
         #photos button
-        img9 = Image.open(r"img\student.jpg")
+        img9 = Image.open(r"img\photoEdit.jpg")
         img9 = img9.resize((220,220),Image.ANTIALIAS)
         self.photoimg9 = ImageTk.PhotoImage(img9)
 
@@ -99,7 +99,7 @@ class Face_Recognition_System:
         
         
         #developer button
-        img10 = Image.open(r"img\1_5TRuG7tG0KrZJXKoFtHlSg.jpeg")
+        img10 = Image.open(r"img\trainingEdit.jpg")
         img10 = img10.resize((220,220),Image.ANTIALIAS)
         self.photoimg10 = ImageTk.PhotoImage(img10)
 
@@ -112,7 +112,7 @@ class Face_Recognition_System:
 
 
         #helpdesk button
-        img7 = Image.open(r"img\help.jpg")
+        img7 = Image.open(r"img\helpEdit.jpg")
         img7 = img7.resize((220,220),Image.ANTIALIAS)
         self.photoimg7 = ImageTk.PhotoImage(img7)
 
@@ -124,7 +124,7 @@ class Face_Recognition_System:
 
 
         #exit button
-        img11 = Image.open(r"img\exit.jpg")
+        img11 = Image.open(r"img\exitEdit.jpg")
         img11 = img11.resize((220,220),Image.ANTIALIAS)
         self.photoimg11 = ImageTk.PhotoImage(img11)
 
